@@ -2,22 +2,14 @@ import PropTypes from 'prop-types'
 import React from 'react'
 import mainVideo from "../media/intro.mp4"
 import downloads from '../media/downloads.png'
-import Gallery from 'react-grid-gallery'
 import mughees from '../media/website/team/mughees.jpg'
 import anthony from '../media/website/team/anthony.jpg'
 import hatem from '../media//website/team/hatem.jpg'
 import zak from '../media/website/team/zak.jpg'
 
-const images =[
-    { source: {hatem}, 
-  }, 
-    { source: {zak} 
-  }, 
-    { source: {anthony} 
-  }, 
-    { source: {mughees} 
-  }
-];
+
+
+
 
 class Main extends React.Component {
   render() {
@@ -29,6 +21,7 @@ class Main extends React.Component {
         }}
       ></div>
     )
+
 
     return (
       <div
@@ -42,62 +35,68 @@ class Main extends React.Component {
           id="about"
           className={`${this.props.article === 'about' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
-          }`}
+            }`}
           style={{ display: 'none' }}
         >
           <h2 className="major">ABOUT</h2>
-          <video height="auto" 
-          width="100%" 
-          controls autoplay
-          preload="auto">
+          <video height="auto"
+            width="100%"
+            controls autoplay
+            preload="auto">
             <source src={mainVideo} type="video/mp4" />
           </video>
           <p>
-          astric* was founded during the COVID-19 crisis to provide a platform for local
-          businesses to advertise different products. The mobile app. uses location tracking
-          to show the most convenient local store in the vicinity with reviews, special offers
-          and contact details.
+            astric* was founded during the COVID-19 crisis to provide a platform for local
+            businesses to advertise different products. The mobile app. uses location tracking
+            to show the most convenient local store in the vicinity with reviews, special offers
+            and contact details.
           </p>
           <span className="image main">
-            <img src={downloads} alt="" height="300"/>
+            <img src={downloads} alt="" height="300" />
           </span>
           {close}
         </article>
-         
-         {/* --------- TEAM --------- */}
+
+        {/* --------- TEAM --------- */}
         <article
           id="work"
           className={`${this.props.article === 'work' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
-          }`}
+            }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">TEAM</h2>
+          <h2 className="major">OUR TEAM</h2>
 
-          <div class="image row">
-            <div class="column">
-              <span className="image team"> 
-                <img class="image team-members" src={hatem}/>
-                
-              </span>
-              <h1>HATEM</h1><h2>Co-Founder</h2>
-              <span className="image team">
-                <img class="image team-members" src={zak}/>
-                
-              </span><h1>ZAK</h1><h2>Co-Founder</h2>
-            </div>
-            <div class="column">
-              <span className="image team">
-                <img class="image team-members" src={anthony}/>
-                
-              </span><h1>ANTHONY</h1><h2>Developer</h2>
+          <div
+            ref={this.props.setWrapperRef}
+            id="main"
+            style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
+          >
+            <span className="image team">
+                <img class="image" src={hatem} />
+                <h1 className="align-right">HATEM</h1>
+              <h2 className="align-right">Co-Founder</h2>
+            </span>
 
-              <span className="image team">
-                <img class="image team-members" src={mughees}/>
-                
-              </span><h1>MUGHEES</h1><h2>Developer</h2>
+            <span className="image team">
+                <img class="image" src={zak} />
+                <h1 className="align-right">ZAK</h1>
+              <h2 className="align-right">Co-Founder</h2>
+            </span>
+
+            <span className="image team">
+                <img class="image" src={anthony} />
+                <h1 className="align-right">ANTHONY</h1>
+              <h2 className="align-right">DEVELOPER</h2>
+            </span>
+
+            <span className="image team">
+                <img class="image" src={mughees} />
+                <h1 className="align-right">MUGHEES</h1>
+              <h2 className="align-right">DEVELOPER</h2>
+            </span>
+
             </div>
-          </div>
 
           {close}
         </article>
@@ -107,7 +106,7 @@ class Main extends React.Component {
           id="demo"
           className={`${this.props.article === 'demo' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
-          }`}
+            }`}
           style={{ display: 'none', textAlign: 'center' }}
         >
           <h2 className="major">DEMO</h2>
@@ -120,7 +119,7 @@ class Main extends React.Component {
           id="contact"
           className={`${this.props.article === 'contact' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
-          }`}
+            }`}
           style={{ display: 'none' }}
         >
           <h2 className="major">CONTACT US</h2>

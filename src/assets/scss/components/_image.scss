@@ -11,6 +11,7 @@
 		border: 0;
 		display: inline-block;
 		position: relative;
+		justify-self: center;
 
 		&:before {
 			@include vendor('pointer-events', 'none');
@@ -74,20 +75,12 @@
 		}
 
 		&.team {
-			display: grid inline-flex;
-			grid-template-columns: repeat(3, 20px [col-start]);
-			column-gap: 10px;
-			row-gap: 15px;
+			display: inline-block;
 			margin: (_size(element-margin) * 1.25) 0;
-			width: 50%;
-align-self: center;
+			width: 75%;
 			img {
 				width: 100%;
 			}
-		}
-
-		.team-members {
-			padding-right: 100px;
 		}
 
 		@include breakpoint(small) {

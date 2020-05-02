@@ -6,6 +6,7 @@
   "author": "Mughees Asif",
   "dependencies": {
     "@material/image-list": "^6.0.0",
+    "bootstrap": "^4.4.1",
     "gatsby": "^2.19.5",
     "gatsby-plugin-manifest": "^2.2.38",
     "gatsby-plugin-react-helmet": "^3.1.21",
@@ -13,7 +14,9 @@
     "gatsby-remark-images-grid": "^1.0.2",
     "node-sass": "^4.13.1",
     "react": "^16.12.0",
+    "react-bootstrap": "^1.0.1",
     "react-dom": "^16.12.0",
+    "react-fb-image-grid": "^0.1.5",
     "react-grid-gallery": "^0.5.5",
     "react-helmet": "^5.2.1",
     "react-images": "^1.1.7",
