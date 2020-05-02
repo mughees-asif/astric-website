@@ -4,10 +4,10 @@ import React from 'react'
 const Header = props => (
   <header id="header" style={props.timeout ? { display: 'none' } : {}}>
     <div className="logo">
-      <span className="icon fa-bolt"></span>
+      <span className="icon fa-map-marker fa-2x"></span>
     </div>
-    <div className="content">
-      <div className="inner">
+    <div className="content" >
+      <div className="inner" >
         <h1>astric*</h1>
         <p>
           For all your local needs
@@ -31,7 +31,16 @@ const Header = props => (
               props.onOpenArticle('work')
             }}
           >
-            Downloads
+            Team
+          </button>
+        </li>
+        <li>
+          <button
+            onClick={() => {
+              props.onOpenArticle('demo')
+            }}
+          >
+            Demo
           </button>
         </li>
         <li>

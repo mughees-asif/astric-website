@@ -73,6 +73,23 @@
 			}
 		}
 
+		&.team {
+			display: grid inline-flex;
+			grid-template-columns: repeat(3, 20px [col-start]);
+			column-gap: 10px;
+			row-gap: 15px;
+			margin: (_size(element-margin) * 1.25) 0;
+			width: 50%;
+align-self: center;
+			img {
+				width: 100%;
+			}
+		}
+
+		.team-members {
+			padding-right: 100px;
+		}
+
 		@include breakpoint(small) {
 			&.main {
 				margin: (_size(element-margin) * 1) 0;

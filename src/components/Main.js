@@ -1,7 +1,23 @@
 import PropTypes from 'prop-types'
 import React from 'react'
 import mainVideo from "../media/intro.mp4"
-import pic02 from '../media/downloads.png'
+import downloads from '../media/downloads.png'
+import Gallery from 'react-grid-gallery'
+import mughees from '../media/website/team/mughees.jpg'
+import anthony from '../media/website/team/anthony.jpg'
+import hatem from '../media//website/team/hatem.jpg'
+import zak from '../media/website/team/zak.jpg'
+
+const images =[
+    { source: {hatem}, 
+  }, 
+    { source: {zak} 
+  }, 
+    { source: {anthony} 
+  }, 
+    { source: {mughees} 
+  }
+];
 
 class Main extends React.Component {
   render() {
@@ -20,6 +36,8 @@ class Main extends React.Component {
         id="main"
         style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
       >
+
+        {/* --------- ABOUT --------- */}
         <article
           id="about"
           className={`${this.props.article === 'about' ? 'active' : ''} ${
@@ -28,7 +46,6 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">ABOUT</h2>
-
           <video height="auto" 
           width="100%" 
           controls autoplay
@@ -41,9 +58,13 @@ class Main extends React.Component {
           to show the most convenient local store in the vicinity with reviews, special offers
           and contact details.
           </p>
+          <span className="image main">
+            <img src={downloads} alt="" height="300"/>
+          </span>
           {close}
         </article>
-
+         
+         {/* --------- TEAM --------- */}
         <article
           id="work"
           className={`${this.props.article === 'work' ? 'active' : ''} ${
@@ -51,13 +72,50 @@ class Main extends React.Component {
           }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">SERVICES</h2>
-          <span className="image main">
-            <img src={pic02} alt="" />
-          </span>
+          <h2 className="major">TEAM</h2>
+
+          <div class="image row">
+            <div class="column">
+              <span className="image team"> 
+                <img class="image team-members" src={hatem}/>
+                
+              </span>
+              <h1>HATEM</h1><h2>Co-Founder</h2>
+              <span className="image team">
+                <img class="image team-members" src={zak}/>
+                
+              </span><h1>ZAK</h1><h2>Co-Founder</h2>
+            </div>
+            <div class="column">
+              <span className="image team">
+                <img class="image team-members" src={anthony}/>
+                
+              </span><h1>ANTHONY</h1><h2>Developer</h2>
+
+              <span className="image team">
+                <img class="image team-members" src={mughees}/>
+                
+              </span><h1>MUGHEES</h1><h2>Developer</h2>
+            </div>
+          </div>
+
           {close}
         </article>
 
+        {/* --------- DEMO --------- */}
+        <article
+          id="demo"
+          className={`${this.props.article === 'demo' ? 'active' : ''} ${
+            this.props.articleTimeout ? 'timeout' : ''
+          }`}
+          style={{ display: 'none', textAlign: 'center' }}
+        >
+          <h2 className="major">DEMO</h2>
+          <img src="https://media.giphy.com/media/mCUYwCRYOQBHiMyPtt/giphy.gif" />
+          {close}
+        </article>
+
+        {/* --------- CONTACT --------- */}
         <article
           id="contact"
           className={`${this.props.article === 'contact' ? 'active' : ''} ${
@@ -103,7 +161,7 @@ class Main extends React.Component {
               </a>
             </li>
             <li>
-              <a href="https://instagram.com/astric" className="icon fa-instagram">
+              <a href="https://instagram.com/astricapp" className="icon fa-instagram">
                 <span className="label">Instagram</span>
               </a>
             </li>
