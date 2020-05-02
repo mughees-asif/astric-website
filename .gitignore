@@ -2,7 +2,8 @@
 .cache
 node_modules
 yarn-error.log
-/website-details
+/src/media
+/src/images
 
 # Build directory
 /public
