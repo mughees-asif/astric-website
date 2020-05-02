@@ -88,6 +88,17 @@
 
 		}
 
+		.tileMe li {
+			display: inline;
+		}
+
+		.tile a {
+			display: block;
+			padding: 10px;
+			border: 1px solid red;
+			margin-right: 5px;
+		}
+
 		@include breakpoint(small) {
 			article {
 				@include padding(2rem, 2rem, (1.5rem, 0, 0.5rem, 0));

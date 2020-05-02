@@ -38,7 +38,7 @@ class Main extends React.Component {
             }`}
           style={{ display: 'none' }}
         >
-          <h2 className="major">ABOUT</h2>
+          <h2 className="major">ABOUT US</h2>
           <video height="auto"
             width="100%"
             controls autoplay
@@ -68,20 +68,19 @@ class Main extends React.Component {
           <h2 className="major">OUR TEAM</h2>
 
           <div
-            ref={this.props.setWrapperRef}
             id="main"
             style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
           >
             <span className="image team">
                 <img class="image" src={hatem} />
                 <h1 className="align-right">HATEM</h1>
-              <h2 className="align-right">Co-Founder</h2>
+              <h2 className="align-right">CO-FOUNDER</h2>
             </span>
 
             <span className="image team">
                 <img class="image" src={zak} />
                 <h1 className="align-right">ZAK</h1>
-              <h2 className="align-right">Co-Founder</h2>
+              <h2 className="align-right">CO-FOUNDER</h2>
             </span>
 
             <span className="image team">
@@ -97,7 +96,6 @@ class Main extends React.Component {
             </span>
 
             </div>
-
           {close}
         </article>
 

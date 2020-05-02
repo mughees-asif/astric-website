@@ -66,7 +66,8 @@
     width: 5.5rem;
     height: 5.5rem;
     line-height: 5.5rem;
-    border: solid _size(border-width) _palette(border);
+    border: solid _size(border-width);
+    border-width: thick;
     border-radius: 100%;
 
     .icon {
@@ -78,9 +79,9 @@
 
   .content {
     border-style: solid;
-    border-color: _palette(border);
-    border-top-width: _size(border-width);
-    border-bottom-width: _size(border-width);
+    border-color:white;
+    border-top-width: thick;
+    border-bottom-width: thick;
     max-width: 100%;
 
     .inner {
@@ -116,8 +117,9 @@
       margin-bottom: 0;
       list-style: none;
       padding-left: 0;
-      border: solid _size(border-width) _palette(border);
-      border-radius: _size(border-radius);
+      border: solid;
+      border-width: thick;
+      border-radius: 30px;
 
       li {
         padding-left: 0;
@@ -182,7 +184,7 @@
 
   .body.is-loading & {
     > * {
-      opacity: 0;
+      opacity: 1;
     }
 
     // @include vendor('filter', 'blur(0.125rem)');
@@ -254,6 +256,7 @@
         @include vendor('flex-direction', 'column');
         min-width: 10rem;
         max-width: 100%;
+        border-width: thick;
 
         li {
           border-left: 0;

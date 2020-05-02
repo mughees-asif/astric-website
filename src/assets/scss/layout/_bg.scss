@@ -8,6 +8,7 @@
 
 #bg {
   @include vendor('transform', 'scale(1.0)');
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   position: fixed;
   top: 0;
@@ -33,7 +34,7 @@
       'background-color #{_duration(bg)} ease-in-out'
     );
     @include vendor('transition-delay', '#{_duration(intro)}');
-    background-size: auto, 256px 256px;
+    background-size: 50%;
     background-position: center, center;
     background-repeat: no-repeat, repeat;
     z-index: 2;
@@ -48,10 +49,10 @@
         'filter #{_duration(article)} ease-in-out'
       )
     );
-    background-image: url('../../media/main.svg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+    // background-image: url('../../media/main.svg');
+    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+    background-size: auto;
+    background-repeat: no-repeat, repeat;
     z-index: 1;
   }
 
