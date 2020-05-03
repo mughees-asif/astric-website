@@ -49,9 +49,10 @@
         'filter #{_duration(article)} ease-in-out'
       )
     );
-    // background-image: url('../../media/main.svg');
-    background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
-    background-size: auto;
+    background-image: url('../../media/main.svg');
+    // background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat, repeat;
     z-index: 1;
   }
