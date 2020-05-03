@@ -52,8 +52,8 @@ class Main extends React.Component {
             to show the most convenient local store in the vicinity with reviews, special offers
             and contact details.
           </p>
-          <span className="image main">
-            <img src={downloads} alt="" height="300" />
+          <span className="main">
+            <img src={downloads} alt="" height="350px" width='auto'/>
           </span>
           {close}
         </article>
@@ -73,25 +73,25 @@ class Main extends React.Component {
           >
               <span className="image team">
                   <img class="image" src={hatem} />
-                  <h1 className="align-right">HATEM</h1>
-                <h2 className="align-right">CO-FOUNDER</h2>
+                  <h1 className="align-right" style={{backgroundColor: 'black'}}>HATEM</h1>
+                <h2 className="align-right" >CO-FOUNDER</h2>
               </span>
 
               <span className="image team">
                   <img class="image" src={zak} />
-                  <h1 className="align-right">ZAK</h1>
+                  <h1 className="align-right" style={{backgroundColor: 'black'}}>ZAK</h1>
                 <h2 className="align-right">CO-FOUNDER</h2>
               </span>
 
               <span className="image team">
                   <img class="image" src={anthony} />
-                  <h1 className="align-right">ANTHONY</h1>
+                  <h1 className="align-right" style={{backgroundColor: 'black'}}>ANTHONY</h1>
                 <h2 className="align-right">DEVELOPER</h2>
               </span>
 
               <span className="image team">
                   <img class="image" src={mughees} />
-                  <h1 className="align-right">MUGHEES</h1>
+                  <h1 className="align-right" style={{backgroundColor: 'black'}}>MUGHEES</h1>
                 <h2 className="align-right">DEVELOPER</h2>
               </span>
             </div>
