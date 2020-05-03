@@ -41,6 +41,7 @@
     @include vendor('transition', 'opacity #{_duration(article)} ease-in-out');
     position: relative;
     margin-top: 3.5rem;
+    color: #9c27b0;
 
     &:before {
       content: '';
@@ -50,7 +51,7 @@
       left: calc(50% - #{_size(border-width) * 1});
       width: _size(border-width);
       height: calc(3.5rem + 1px);
-      background: _palette(border);
+      background: #9c27b0;
     }
   }
 
@@ -69,17 +70,19 @@
     border: solid _size(border-width);
     border-width: thick;
     border-radius: 100%;
+    background-color: #9c27b0;
 
     .icon {
       &:before {
         font-size: 2rem;
+        color: black;
       }
     }
   }
 
   .content {
     border-style: solid;
-    border-color:white;
+    color:#9c27b0;
     border-top-width: thick;
     border-bottom-width: thick;
     max-width: 100%;
@@ -96,6 +99,7 @@
       @include vendor('transition-delay', '0.25s');
       padding: 3rem 2rem;
       max-height: 40rem;
+      color: #9c27b0;
       overflow: hidden;
 
       > :last-child {
@@ -116,6 +120,7 @@
       @include vendor('display', 'flex');
       margin-bottom: 0;
       list-style: none;
+      border-color:#9c27b0;
       padding-left: 0;
       border: solid;
       border-width: thick;
@@ -124,7 +129,7 @@
       li {
         padding-left: 0;
         border-left: solid _size(border-width) _palette(border);
-
+        border-color:#9c27b0;
         &:first-child {
           border-left: 0;
         }
@@ -136,6 +141,9 @@
           line-height: 2.75rem;
           padding: 0 1.25rem 0 (1.25rem + _font(letter-spacing));
           text-transform: uppercase;
+          text-align: center;
+          font-weight: bold;
+          border-color: black;
           letter-spacing: _font(letter-spacing);
           font-size: 0.8rem;
           font-family: _font(family);
@@ -148,7 +156,7 @@
           }
 
           &:active {
-            background-color: _palette(border-bg-alt);
+            background-color: black;
           }
         }
       }
@@ -163,7 +171,7 @@
         left: calc(50% - #{_size(border-width) * 1});
         width: _size(border-width);
         height: 100%;
-        background: _palette(border);
+        background-color: black;
       }
 
       ul {
@@ -223,10 +231,12 @@
       width: 4.75rem;
       height: 4.75rem;
       line-height: 4.75rem;
+      border-color:black;
 
       .icon {
         &:before {
           font-size: 1.75rem;
+          color:black;
         }
       }
     }
@@ -234,6 +244,7 @@
     .content {
       .inner {
         padding: 2.5rem 1rem;
+        color:black;
       }
 
       p {
@@ -257,9 +268,11 @@
         min-width: 10rem;
         max-width: 100%;
         border-width: thick;
+        border-color:black;
 
         li {
           border-left: 0;
+          border-color:black;
           border-top: solid _size(border-width) _palette(border);
 
           &:first-child {
@@ -269,6 +282,7 @@
           a {
             height: 3rem;
             line-height: 3rem;
+            border-color:black;
             min-width: 0;
             width: 100%;
           }
@@ -278,6 +292,7 @@
       &.use-middle {
         &:after {
           display: none;
+          border-color:black;
         }
       }
     }

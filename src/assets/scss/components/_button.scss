@@ -16,8 +16,8 @@
 		background-color: transparent;
 		border-radius: _size(border-radius);
 		border: 0;
-		box-shadow: inset 0 0 0 _size(border-width) _palette(border);
-		color: _palette(fg-bold) !important;
+		box-shadow: inset 0 0 0 _size(border-width) black;
+		color: _palette(bg) !important;
 		cursor: pointer;
 		display: inline-block;
 		font-size: 0.8rem;
@@ -34,10 +34,11 @@
 
 		&:hover {
 			background-color: _palette(border-bg);
+			color: _palette(fg) !important;
 		}
 
 		&:active {
-			background-color: _palette(border-bg-alt);
+			background-color: _palette(border-bg);
 		}
 
 		&.icon {
@@ -53,11 +54,13 @@
 		}
 
 		&.special {
-			background-color: _palette(fg-bold);
-			color: _palette(bg) !important;
+			background-color: _palette(bg);
+			color: _palette(fg) !important;
 			font-weight: _font(weight-bold);
 
 			&:hover {
+				background-color: _palette(fg);
+				color: _palette(bg) !important;
 			}
 
 			&:active {

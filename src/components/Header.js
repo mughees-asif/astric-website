@@ -8,8 +8,8 @@ const Header = props => (
     </div>
     <div className="content" >
       <div className="inner" >
-        <h1>astric*</h1>
-        <p>
+        <h1 style={{color: 'black'}}>astric*</h1>
+        <p style={{fontWeight: 'bold'}}>
           For all your local needs
         </p>
       </div>

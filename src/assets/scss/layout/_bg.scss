@@ -49,15 +49,17 @@
         'filter #{_duration(article)} ease-in-out'
       )
     );
-    background-image: url('../../media/main.svg');
+    background-image: url('../../media/background.png');
     // background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
-    background-position: center;
-    background-size: 100% 100%;
-    background-repeat: no-repeat, repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: white;
     z-index: 1;
   }
 
   .body.is-article-visible & {
+  
     &:after {
       @include vendor('transform', 'scale(1.0825)');
       @include vendor('filter', 'blur(0.2rem)');
@@ -66,7 +68,13 @@
 
   .body.is-loading & {
     &:before {
-      background-color: _palette(bg-alt);
+      background-color: _palette(bg);
     }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #bg {
+    background-image: url('../../media/background.png');
   }
 }

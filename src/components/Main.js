@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import mainVideo from "../media/intro.mp4"
+import mainVideo from '../media/intro.mp4'
+import demoVideo from '../media/demo.mp4'
 import downloads from '../media/downloads.png'
 import mughees from '../media/website/team/mughees.jpg'
 import anthony from '../media/website/team/anthony.jpg'
@@ -66,35 +67,33 @@ class Main extends React.Component {
           style={{ display: 'none' }}
         >
           <h2 className="major">OUR TEAM</h2>
-
           <div
             id="main"
             style={this.props.timeout ? { display: 'flex' } : { display: 'none' }}
           >
-            <span className="image team">
-                <img class="image" src={hatem} />
-                <h1 className="align-right">HATEM</h1>
-              <h2 className="align-right">CO-FOUNDER</h2>
-            </span>
+              <span className="image team">
+                  <img class="image" src={hatem} />
+                  <h1 className="align-right">HATEM</h1>
+                <h2 className="align-right">CO-FOUNDER</h2>
+              </span>
 
-            <span className="image team">
-                <img class="image" src={zak} />
-                <h1 className="align-right">ZAK</h1>
-              <h2 className="align-right">CO-FOUNDER</h2>
-            </span>
+              <span className="image team">
+                  <img class="image" src={zak} />
+                  <h1 className="align-right">ZAK</h1>
+                <h2 className="align-right">CO-FOUNDER</h2>
+              </span>
 
-            <span className="image team">
-                <img class="image" src={anthony} />
-                <h1 className="align-right">ANTHONY</h1>
-              <h2 className="align-right">DEVELOPER</h2>
-            </span>
+              <span className="image team">
+                  <img class="image" src={anthony} />
+                  <h1 className="align-right">ANTHONY</h1>
+                <h2 className="align-right">DEVELOPER</h2>
+              </span>
 
-            <span className="image team">
-                <img class="image" src={mughees} />
-                <h1 className="align-right">MUGHEES</h1>
-              <h2 className="align-right">DEVELOPER</h2>
-            </span>
-
+              <span className="image team">
+                  <img class="image" src={mughees} />
+                  <h1 className="align-right">MUGHEES</h1>
+                <h2 className="align-right">DEVELOPER</h2>
+              </span>
             </div>
           {close}
         </article>
@@ -108,7 +107,12 @@ class Main extends React.Component {
           style={{ display: 'none', textAlign: 'center' }}
         >
           <h2 className="major">DEMO</h2>
-          <img src="https://media.giphy.com/media/mCUYwCRYOQBHiMyPtt/giphy.gif" />
+          <video height="auto"
+            width="50%"
+            controls autoplay
+            preload="auto">
+            <source src={demoVideo} type="video/mp4" />
+          </video>
           {close}
         </article>
 

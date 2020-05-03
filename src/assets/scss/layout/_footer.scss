@@ -27,6 +27,7 @@
     opacity: 0.75;
     margin-bottom: 0;
     text-transform: uppercase;
+    color: black;
   }
 
   .body.is-article-visible & {
@@ -37,5 +38,6 @@
 
   .body.is-loading & {
     opacity: 0;
+    color: black;
   }
 }
