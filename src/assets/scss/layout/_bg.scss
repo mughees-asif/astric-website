@@ -49,17 +49,15 @@
         'filter #{_duration(article)} ease-in-out'
       )
     );
-    background-image: url('../../media/background.png');
-    // background: linear-gradient(90deg, #efd5ff 0%, #515ada 100%);
+    background-image: url('../../media/logo.png');
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
+    background-size: 25%;
+    background-position: 10% 10%;
     background-color: white;
     z-index: 1;
   }
 
   .body.is-article-visible & {
-  
     &:after {
       @include vendor('transform', 'scale(1.0825)');
       @include vendor('filter', 'blur(0.2rem)');
@@ -75,6 +73,27 @@
 
 @media only screen and (max-width: 500px) {
   #bg {
-    background-image: url('../../media/background.png');
+    background-image: url('../../media/mobileBackground.png');
   }
 }
+
+// @media (min-width: 500px) and (min-height: 400px) {
+//   #bg {
+//       width: 350px;
+//       height: 300px;
+//   }
+// }
+
+// @media (min-width: 500px) and (min-height: 401px) {
+//   #bg {
+//       width: 450px;
+//       height: 400px;
+//   }
+// }
+
+// @media (min-width: 1000px) and (min-height: 700px) {
+//   #bg {
+//       width: 700px;
+//       height: 600px;
+//   }
+// }
