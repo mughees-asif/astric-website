@@ -128,7 +128,7 @@
 
       li {
         padding-left: 0;
-        border-left: solid _size(border-width) _palette(border);
+        border-left: solid _size(border-width) _palette(bg);
         border-color:#9c27b0;
         &:first-child {
           border-left: 0;
