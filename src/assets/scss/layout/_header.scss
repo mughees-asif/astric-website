@@ -261,19 +261,22 @@
       }
     }
 
+    // ---------------- mobile dimensions ----------------
+
     nav {
       ul {
         @include vendor('flex-direction', 'column');
-        min-width: 10rem;
+        min-width: 0rem;
         max-width: 100%;
         border-width: thick;
         border-color:#9c27b0;
         text-align: center;
+        border-radius: 30px;
 
         li {
           border-left: 0;
           border-color:#9c27b0;
-          border-top: solid _size(border-width) _palette(border);
+          border-top: solid _size(border-width) _palette(bg);
 
           &:first-child {
             border-top: 0;
@@ -291,8 +294,13 @@
 
       &.use-middle {
         &:after {
-          display: none;
-          border-color: transparent;
+          display: block;
+          position: absolute;
+          top: 0;
+          left: calc(50% - #{_size(border-width) * 1});
+          width: _size(border-width);
+          height: 100%;
+          background-color: black;
         }
       }
     }
