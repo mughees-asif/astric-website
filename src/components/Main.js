@@ -37,11 +37,11 @@ class Main extends React.Component {
           className={`${this.props.article === 'about' ? 'active' : ''} ${
             this.props.articleTimeout ? 'timeout' : ''
             }`}
-          style={{ display: 'none' }}
+          style={{ display: 'none', textAlign: 'center' }}
         >
           <h2 className="major">ABOUT US</h2>
           <video height="auto"
-            width="100%"
+            width="75%"
             controls autoplay
             preload="auto">
             <source src={mainVideo} type="video/mp4" />
@@ -53,7 +53,7 @@ class Main extends React.Component {
             and contact details.
           </p>
           <span className="main">
-            <img src={downloads} alt="" height="350px" width='auto'/>
+            <img src={downloads} alt="" height="250px" width='auto'/>
           </span>
           {close}
         </article>

@@ -143,7 +143,6 @@
           text-transform: uppercase;
           text-align: center;
           font-weight: bold;
-          border-color: black;
           letter-spacing: _font(letter-spacing);
           font-size: 0.8rem;
           font-family: _font(family);
@@ -152,11 +151,11 @@
 
           &:hover,
           &:focus {
-            background-color: _palette(border-bg);
+            background-color: transparent;
           }
 
           &:active {
-            background-color: black;
+            background-color: transparent;
           }
         }
       }
@@ -268,11 +267,12 @@
         min-width: 10rem;
         max-width: 100%;
         border-width: thick;
-        border-color:black;
+        border-color:#9c27b0;
+        text-align: center;
 
         li {
           border-left: 0;
-          border-color:black;
+          border-color:#9c27b0;
           border-top: solid _size(border-width) _palette(border);
 
           &:first-child {
@@ -282,7 +282,7 @@
           a {
             height: 3rem;
             line-height: 3rem;
-            border-color:black;
+            border-color:#9c27b0;
             min-width: 0;
             width: 100%;
           }
@@ -292,7 +292,7 @@
       &.use-middle {
         &:after {
           display: none;
-          border-color:black;
+          border-color: transparent;
         }
       }
     }
