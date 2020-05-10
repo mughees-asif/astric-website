@@ -265,11 +265,11 @@
       }
     }
 
-    // ---------------- mobile dimensions ----------------
+    // ---------------- mobile UI ----------------
 
     nav {
       ul {
-        @include vendor('flex-direction', 'column');
+        @include vendor('display', 'flex');
         min-width: 0rem;
         max-width: 100%;
         border-width: thick;
