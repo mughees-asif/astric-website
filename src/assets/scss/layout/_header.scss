@@ -198,10 +198,11 @@
 
     .content {
       .inner {
-        max-height: 0;
-        padding-top: 0;
-        padding-bottom: 0;
-        opacity: 0;
+        border-style: solid;
+        color:#9c27b0;
+        border-top-width: thick;
+        border-bottom-width: thick;
+        max-width: 100%;
       }
     }
   }
@@ -227,10 +228,13 @@
     }
 
     .logo {
-      width: 4.75rem;
-      height: 4.75rem;
-      line-height: 4.75rem;
-      border-color:black;
+      width: 5.5rem;
+      height: 5.5rem;
+      line-height: 5.5rem;
+      border: solid _size(border-width);
+      border-width: thick;
+      border-radius: 100%;
+      background-color: #9c27b0;
 
       .icon {
         &:before {
