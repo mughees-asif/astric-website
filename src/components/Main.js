@@ -5,12 +5,8 @@ import demoVideo from '../media/demo.mp4'
 import downloads from '../media/downloads.png'
 import mughees from '../media/website/team/mughees.jpg'
 import anthony from '../media/website/team/anthony.jpg'
-import hatem from '../media//website/team/hatem.jpg'
+import hatem from '../media//website/team/hatem.jpeg'
 import zak from '../media/website/team/zak.jpg'
-
-
-
-
 
 class Main extends React.Component {
   render() {
@@ -41,7 +37,7 @@ class Main extends React.Component {
         >
           <h2 className="major">ABOUT US</h2>
           <video height="auto"
-            width="75%"
+            width="95%"
             controls autoplay
             preload="auto">
             <source src={mainVideo} type="video/mp4" />
@@ -53,7 +49,7 @@ class Main extends React.Component {
             and contact details.
           </p>
           <span className="main">
-            <img src={downloads} alt="" height="250px"/>
+            <img src={downloads} alt="" height="250px" width="400px"/>
           </span>
           {close}
         </article>
@@ -164,14 +160,6 @@ class Main extends React.Component {
             <li>
               <a href="https://instagram.com/astricapp" className="icon fa-instagram">
                 <span className="label">Instagram</span>
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://github.com/mughees-asif/astric-website"
-                className="icon fa-github"
-              >
-                <span className="label">GitHub</span>
               </a>
             </li>
           </ul>
