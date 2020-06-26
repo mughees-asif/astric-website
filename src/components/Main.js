@@ -122,6 +122,7 @@ class Main extends React.Component {
         >
           <h2 className="major">CONTACT US</h2>
           <form name="contact" method="POST" data-netlify="true">
+          <input type="hidden" name="contact" value="contact" />
             <div className="field half first">
               <label htmlFor="name">Name</label>
               <input type="text" name="name" id="name" />
