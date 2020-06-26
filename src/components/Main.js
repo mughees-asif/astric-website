@@ -48,7 +48,7 @@ class Main extends React.Component {
             to show the most convenient local store in the vicinity with reviews, special offers
             and contact details.
           </p>
-          <span className="main">
+          <span className="image team">
             <img src={downloads} alt="" height="250px" width="400px"/>
           </span>
           {close}
