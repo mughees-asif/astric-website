@@ -19,7 +19,6 @@ class Main extends React.Component {
       ></div>
     )
 
-
     return (
       <div
         ref={this.props.setWrapperRef}
