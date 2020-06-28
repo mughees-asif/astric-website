@@ -147,7 +147,7 @@ class Main extends React.Component {
           <ul className="icons">
             <li>
               <a
-                href="https://twitter.com/astric"
+                href="https://twitter.com/astricapp"
                 className="icon fa-twitter"
               >
                 <span className="label">Twitter</span>
