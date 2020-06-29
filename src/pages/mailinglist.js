@@ -29,7 +29,8 @@ class ContactForm extends React.Component {
     return (
       <div style={background}>
       <Layout>
-        <h1 className="major" style={text}>Mailing List</h1>
+      <h1 className="major" style={text}>astric* | Mailing List</h1>
+      <h2 className="" style={text}>For all your local needs</h2>
         <h3  style={text}>Please fill in the following form to register your interest.</h3>
           <form  form name="mailinglist" method="POST" data-netlify="true">
             <div className="field half first">
