@@ -77,7 +77,7 @@ export default function MailingList() {
 
             <div className="field" style={{ textAlign: 'center' }}>
               <label>Customer or Business</label>
-              <FormControl component="fieldset" className={classes.formControl} >
+              <FormControl component="fieldset">
                 <Select
                   labelId="demo-simple-select-label"
                   id="demo-simple-select"
@@ -90,12 +90,12 @@ export default function MailingList() {
             </div>
 
             <div className="field" style={{ textAlign: 'center' }}>
-              <label>Type of business</label>
+              <label>If selected business, please indicate type of business</label>
               <input type="text" name="type of business" />
             </div>
 
             <div className="field" style={{ textAlign: 'center' }}>
-              <FormControl component="fieldset" name="mailing list" className={classes.formControl}>
+              <FormControl component="fieldset" name="Join mailing list" >
                 <label>Join mailing list</label>
                 <RadioGroup aria-label="newsletter" name="newsletter" value={value} onChange={handleChange}>
                   <FormControlLabel value="Yes" control={<Radio onClick={handleClick} />} label="Yes" />
@@ -116,7 +116,7 @@ export default function MailingList() {
             </div>
 
           </form>
-          
+
           <div style={{ textAlign: 'center' }}>
             <ul className="icons">
               <li>
