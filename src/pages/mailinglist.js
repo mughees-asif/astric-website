@@ -3,14 +3,20 @@ import Layout from '../components/layout'
 
 
 class ContactForm extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      name: "React"
+    };
+    this.onChangeValue = this.onChangeValue.bind(this);
+  }
 
-  render() {
-    const formStyle = {
-      textAlign: 'left'
-    }
-    const background ={
-      backgroundColor: '#ba68c8',
-      margin: '2.5rem'
+  onChangeValue(event) {
+    console.log(event.target.value);
+  }
+    render() {
+    const background = {
+      backgroundColor: '#ba68c8'
     }
     const text = {
       color: 'black'
@@ -21,14 +27,15 @@ class ContactForm extends React.Component {
       textColor: 'white',
       color: 'white'
     }
+    
 
     return (
       <div style={background}>
-      <Layout>
-      <h1 className="major" style={text}>astric* | Mailing List</h1>
-      <h2 className="" style={text}>For all your local needs</h2>
-        <h3  style={text}>Please fill in the following form to register your interest.</h3>
-          <form  form name="mailinglist" method="POST" data-netlify="true">
+        <Layout>
+          <h1 className="major" style={text}>astric* | Mailing List</h1>
+          <h2 className="" style={text}>For all your local needs</h2>
+          <h3 style={text}>Please fill in the following form to register your interest.</h3>
+          <form form name="mailinglist" method="POST" data-netlify="true">
             <div className="field half first">
               <label>Full name</label>
               <input type="text" name="name" />
@@ -37,39 +44,45 @@ class ContactForm extends React.Component {
               <label>Email</label>
               <input type="text" name="email" />
             </div>
-            <div className="field">
-              <label>Message</label>
-              <textarea name="message" rows="4"></textarea>
-            </div>
-            <ul className="actions" style={buttonsStyle}>
+            <div onChange={this.onChangeValue}>
+              <label>Customer/Business</label>
+        <input type="radio" value="Male" name="gender" /> Male
+        <input type="radio" value="Female" name="gender" /> Female
+        <input type="radio" value="Other" name="gender" /> 
+      </div>
+              <div className="field">
+                <label>Message</label>
+                <textarea name="message" rows="4"></textarea>
+              </div>
+              <ul className="actions" style={buttonsStyle}>
+                <li>
+                  <input type="submit" value="Send Message" />
+                </li>
+                <li>
+                  <input type="reset" value="Reset" />
+                </li>
+              </ul>
+          </form>
+            <ul className="icons">
               <li>
-                <input type="submit" value="Send Message" />
+                <a
+                  href="https://twitter.com/astricapp"
+                  className="icon fa-twitter"
+                >
+                  <span className="label">Twitter</span>
+                </a>
               </li>
               <li>
-                <input type="reset" value="Reset" />
+                <a href="https://facebook.com/astricapp" className="icon fa-facebook">
+                  <span className="label">Facebook</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/astricapp" className="icon fa-instagram">
+                  <span className="label">Instagram</span>
+                </a>
               </li>
             </ul>
-          </form>
-          <ul className="icons">
-            <li>
-              <a
-                href="https://twitter.com/astricapp"
-                className="icon fa-twitter"
-              >
-                <span className="label">Twitter</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://facebook.com/astricapp" className="icon fa-facebook">
-                <span className="label">Facebook</span>
-              </a>
-            </li>
-            <li>
-              <a href="https://instagram.com/astricapp" className="icon fa-instagram">
-                <span className="label">Instagram</span>
-              </a>
-            </li>
-          </ul>
       </Layout>
       </div>
     );
