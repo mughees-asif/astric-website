@@ -7,32 +7,9 @@ import Select from '@material-ui/core/Select'
 import Radio from '@material-ui/core/Radio'
 import RadioGroup from '@material-ui/core/RadioGroup'
 
-import { makeStyles } from '@material-ui/core/styles'
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    display: "flex"
-  },
-  formControl: {
-    margin: theme.spacing(3)
-  },
-  group: {
-    margin: theme.spacing(1, 0)
-  }
-}));
-
-
-
 export default function MailingList() {
-  const classes = useStyles();
+
   const [value, setValue] = React.useState('Yes');
-  function handleClick(event) {
-    if (event.target.value === value) {
-      setValue("");
-    } else {
-      setValue(event.target.value);
-    }
-  }
 
   const handleChange = (event) => {
     setValue(event.target.value);
@@ -42,14 +19,14 @@ export default function MailingList() {
     backgroundColor: '#ba68c8',
   }
   const innerBackground = {
-    marginLeft: '3.5rem',
-    marginRight: '3.5rem'
+    marginLeft: '5rem',
+    marginRight: '5rem'
   }
   const text = {
     color: 'black',
   }
   const buttonsStyle = {
-    margin: '2rem',
+    margin: '0.5rem',
     textAlign: 'center'
   }
 
@@ -94,27 +71,20 @@ export default function MailingList() {
               <input type="text" name="type of business" />
             </div>
 
-            <div className="field" style={{ textAlign: 'center' }}>
+            <div style={{ textAlign: 'center' }}>
               <FormControl component="fieldset" name="Join mailing list" >
                 <label>Join mailing list</label>
                 <RadioGroup aria-label="newsletter" name="newsletter" value={value} onChange={handleChange}>
-                  <FormControlLabel value="Yes" control={<Radio onClick={handleClick} />} label="Yes" />
-                  <FormControlLabel value="No" control={<Radio onClick={handleClick} />} label="No" />
+                  <FormControlLabel value="Yes" control={<Radio />} label="Yes" />
+                  <FormControlLabel value="No" control={<Radio />} label="No" />
                 </RadioGroup>
               </FormControl>
             </div>
-
-            <div>
               <ul className="actions" style={buttonsStyle}>
                 <li>
-                  <input type="submit" value="Submit" />
-                </li>
-                <li>
-                  <input type="reset" value="Reset" />
+                  <input style={{ border: '1px solid black', boxShadow: '0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19)'}} type="submit" value="Submit" />
                 </li>
               </ul>
-            </div>
-
           </form>
 
           <div style={{ textAlign: 'center' }}>
