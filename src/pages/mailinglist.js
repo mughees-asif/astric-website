@@ -61,16 +61,20 @@ export default function MailingList() {
           <h1 className='major' style={text}>astric* | Mailing List</h1>
           <h2 style={text}>For all your local needs</h2>
           <h3 style={text}>Please fill in the following form to register your interest.</h3>
+
           <form name="mailinglist" method="POST" data-netlify="true">
+
             <input type="hidden" name="mailinglist" value="mailinglist" />
             <div className="field half first" style={{ textAlign: 'center' }}>
               <label>Full name</label>
               <input type="text" name="name" />
             </div>
+
             <div className="field half" style={{ textAlign: 'center' }}>
               <label>Email</label>
               <input type="text" name="email" />
             </div>
+
             <div className="field" style={{ textAlign: 'center' }}>
               <label>Customer or Business</label>
               <FormControl component="fieldset" className={classes.formControl} >
@@ -79,25 +83,27 @@ export default function MailingList() {
                   id="demo-simple-select"
                   name="customer or business"
                 >
-                  <MenuItem value={10}>Customer</MenuItem>
-                  <input type="text" name="business or customer" />
-                  <MenuItem value={20}>Business</MenuItem>
+                  <MenuItem value={"customer"}>Customer</MenuItem>
+                  <MenuItem value={"business"}>Business</MenuItem>
                 </Select>
               </FormControl>
             </div>
+
             <div className="field" style={{ textAlign: 'center' }}>
               <label>Type of business</label>
               <input type="text" name="type of business" />
             </div>
+
             <div className="field" style={{ textAlign: 'center' }}>
               <FormControl component="fieldset" name="mailing list" className={classes.formControl}>
                 <label>Join mailing list</label>
                 <RadioGroup aria-label="newsletter" name="newsletter" value={value} onChange={handleChange}>
-                  <FormControlLabel value="Yes" name="yes" control={<Radio onClick={handleClick} />} label="Yes" />
-                  <FormControlLabel value="No" name="no" control={<Radio onClick={handleClick} />} label="No" />
+                  <FormControlLabel value="Yes" control={<Radio onClick={handleClick} />} label="Yes" />
+                  <FormControlLabel value="No" control={<Radio onClick={handleClick} />} label="No" />
                 </RadioGroup>
               </FormControl>
             </div>
+
             <div>
               <ul className="actions" style={buttonsStyle}>
                 <li>
@@ -108,7 +114,9 @@ export default function MailingList() {
                 </li>
               </ul>
             </div>
+
           </form>
+          
           <div style={{ textAlign: 'center' }}>
             <ul className="icons">
               <li>
