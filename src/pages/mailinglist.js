@@ -3,20 +3,10 @@ import Layout from '../components/layout'
 
 
 class ContactForm extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      name: "React"
-    };
-    this.onChangeValue = this.onChangeValue.bind(this);
-  }
 
-  onChangeValue(event) {
-    console.log(event.target.value);
-  }
     render() {
     const background = {
-      backgroundColor: '#ba68c8'
+      backgroundColor: '#ba68c8',
     }
     const text = {
       color: 'black'
@@ -35,7 +25,8 @@ class ContactForm extends React.Component {
           <h1 className="major" style={text}>astric* | Mailing List</h1>
           <h2 className="" style={text}>For all your local needs</h2>
           <h3 style={text}>Please fill in the following form to register your interest.</h3>
-          <form form name="mailinglist" method="POST" data-netlify="true">
+          <form name="mailinglist" method="POST" data-netlify="true">
+          <input type="hidden" name="contact" value="contact" />
             <div className="field half first">
               <label>Full name</label>
               <input type="text" name="name" />
@@ -44,12 +35,6 @@ class ContactForm extends React.Component {
               <label>Email</label>
               <input type="text" name="email" />
             </div>
-            <div onChange={this.onChangeValue}>
-              <label>Customer/Business</label>
-        <input type="radio" value="Male" name="gender" /> Male
-        <input type="radio" value="Female" name="gender" /> Female
-        <input type="radio" value="Other" name="gender" /> 
-      </div>
               <div className="field">
                 <label>Message</label>
                 <textarea name="message" rows="4"></textarea>
