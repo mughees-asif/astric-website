@@ -8,6 +8,10 @@ class ContactForm extends React.Component {
     const background = {
       backgroundColor: '#ba68c8',
     }
+    const innerBackground = {
+      marginLeft: '2.5rem',
+      marginRight: '2.5rem'
+    }
     const text = {
       color: 'black'
     }
@@ -22,6 +26,7 @@ class ContactForm extends React.Component {
     return (
       <div style={background}>
         <Layout>
+          <div style={innerBackground}>
           <h1 className="major" style={text}>astric* | Mailing List</h1>
           <h2 className="" style={text}>For all your local needs</h2>
           <h3 style={text}>Please fill in the following form to register your interest.</h3>
@@ -68,6 +73,7 @@ class ContactForm extends React.Component {
                 </a>
               </li>
             </ul>
+            </div>
       </Layout>
       </div>
     );
