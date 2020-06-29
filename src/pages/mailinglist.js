@@ -62,7 +62,7 @@ export default function MailingList() {
           <h2 style={text}>For all your local needs</h2>
           <h3 style={text}>Please fill in the following form to register your interest.</h3>
           <form name="mailinglist" method="POST" data-netlify="true">
-            <input type="hidden" name="contact" value="contact" />
+            <input type="hidden" name="mailinglist" value="mailinglist" />
             <div className="field half first" style={{ textAlign: 'center' }}>
               <label>Full name</label>
               <input type="text" name="name" />
@@ -80,6 +80,7 @@ export default function MailingList() {
                   name="customer or business"
                 >
                   <MenuItem value={10}>Customer</MenuItem>
+                  <input type="text" name="business or customer" />
                   <MenuItem value={20}>Business</MenuItem>
                 </Select>
               </FormControl>
