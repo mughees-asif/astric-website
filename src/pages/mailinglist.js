@@ -1,6 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
-
 import Layout from '../components/layout'
 
 
@@ -12,12 +10,10 @@ class ContactForm extends React.Component {
     }
     const background ={
       backgroundColor: '#ba68c8',
+      margin: '2.5rem'
     }
     const text = {
       color: 'black'
-    }
-    const formText = {
-
     }
     const buttonsStyle = {
       margin: '2rem',
