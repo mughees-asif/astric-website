@@ -3,12 +3,80 @@ import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 
-const MailingList = () => (
-  <Layout>
-    <h1 className="major">Mailing List</h1>
-    <h2>Please fill out the following form to register your interest.</h2>
-    <Link to="/">astric*&copy;</Link>
-  </Layout>
-)
 
-export default MailingList
+class ContactForm extends React.Component {
+
+  render() {
+    const formStyle = {
+      textAlign: 'left'
+    }
+    const background ={
+      backgroundColor: '#ba68c8',
+    }
+    const text = {
+      color: 'black'
+    }
+    const formText = {
+
+    }
+    const buttonsStyle = {
+      margin: '2rem',
+      textAlign: 'center',
+      textColor: 'white',
+      color: 'white'
+    }
+
+    return (
+      <div style={background}>
+      <Layout>
+        <h1 className="major" style={text}>Mailing List</h1>
+        <h3  style={text}>Please fill in the following form to register your interest.</h3>
+          <form  form name="mailinglist" method="POST" data-netlify="true">
+            <div className="field half first">
+              <label>Full name</label>
+              <input type="text" name="name" />
+            </div>
+            <div className="field half">
+              <label>Email</label>
+              <input type="text" name="email" />
+            </div>
+            <div className="field">
+              <label>Message</label>
+              <textarea name="message" rows="4"></textarea>
+            </div>
+            <ul className="actions" style={buttonsStyle}>
+              <li>
+                <input type="submit" value="Send Message" />
+              </li>
+              <li>
+                <input type="reset" value="Reset" />
+              </li>
+            </ul>
+          </form>
+          <ul className="icons">
+            <li>
+              <a
+                href="https://twitter.com/astricapp"
+                className="icon fa-twitter"
+              >
+                <span className="label">Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://facebook.com/astricapp" className="icon fa-facebook">
+                <span className="label">Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://instagram.com/astricapp" className="icon fa-instagram">
+                <span className="label">Instagram</span>
+              </a>
+            </li>
+          </ul>
+      </Layout>
+      </div>
+    );
+  }
+}
+
+export default ContactForm
