@@ -1,83 +1,135 @@
 import React from 'react'
 import Layout from '../components/layout'
+import MenuItem from '@material-ui/core/MenuItem'
+import FormControl from '@material-ui/core/FormControl'
+import FormControlLabel from '@material-ui/core/FormControlLabel'
+import Select from '@material-ui/core/Select'
+import Radio from '@material-ui/core/Radio'
+import RadioGroup from '@material-ui/core/RadioGroup'
+
+import { makeStyles } from '@material-ui/core/styles'
+
+const useStyles = makeStyles(theme => ({
+  root: {
+    display: "flex"
+  },
+  formControl: {
+    margin: theme.spacing(3)
+  },
+  group: {
+    margin: theme.spacing(1, 0)
+  }
+}));
 
 
-class ContactForm extends React.Component {
 
-    render() {
+export default function MailingList() {
+  const classes = useStyles();
+  const [value, setValue] = React.useState('Yes');
+  function handleClick(event) {
+    if (event.target.value === value) {
+      setValue("");
+    } else {
+      setValue(event.target.value);
+    }
+  }
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
+
     const background = {
       backgroundColor: '#ba68c8',
     }
     const innerBackground = {
-      marginLeft: '2.5rem',
-      marginRight: '2.5rem'
+      marginLeft: '3.5rem',
+      marginRight: '3.5rem'
     }
     const text = {
-      color: 'black'
+      color: 'black',
     }
     const buttonsStyle = {
       margin: '2rem',
-      textAlign: 'center',
-      textColor: 'white',
-      color: 'white'
+      textAlign: 'center'
     }
-    
+
 
     return (
       <div style={background}>
         <Layout>
           <div style={innerBackground}>
-          <h1 className="major" style={text}>astric* | Mailing List</h1>
-          <h2 className="" style={text}>For all your local needs</h2>
-          <h3 style={text}>Please fill in the following form to register your interest.</h3>
-          <form name="mailinglist" method="POST" data-netlify="true">
-          <input type="hidden" name="contact" value="contact" />
-            <div className="field half first">
-              <label>Full name</label>
-              <input type="text" name="name" />
-            </div>
-            <div className="field half">
-              <label>Email</label>
-              <input type="text" name="email" />
-            </div>
-              <div className="field">
-                <label>Message</label>
-                <textarea name="message" rows="4"></textarea>
+            <h1 className='major' style={text}>astric* | Mailing List</h1>
+            <h2 style={text}>For all your local needs</h2>
+            <h3 style={text}>Please fill in the following form to register your interest.</h3>
+            <form name="mailinglist" method="POST" data-netlify="true">
+              <input type="hidden" name="contact" value="contact" />
+              <div className="field half first" style={{ textAlign: 'center' }}>
+                <label>Full name</label>
+                <input type="text" name="name" />
               </div>
-              <ul className="actions" style={buttonsStyle}>
+              <div className="field half" style={{ textAlign: 'center' }}>
+                <label>Email</label>
+                <input type="text" name="email" />
+              </div>
+              <div className="field" style={{ textAlign: 'center' }}>
+                <label>Customer or Business</label>
+                <FormControl component="fieldset" className={classes.formControl} >
+                  <Select
+                    labelId="demo-simple-select-label"
+                    id="demo-simple-select"
+                  >
+                    <MenuItem value={10}>Customer</MenuItem>
+                    <MenuItem value={20}>Business</MenuItem>
+                  </Select>
+                </FormControl>
+              </div>
+              <div className="field" style={{ textAlign: 'center' }}>
+                <label>Type of business</label>
+                <input type="text" name="name" />
+              </div>
+              <div className="field" style={{ textAlign: 'center' }}>
+              <FormControl component="fieldset" className={classes.formControl}>
+                <label>Join mailing list</label>
+                <RadioGroup aria-label="newsletter" name="newsletter" value={value} onChange={handleChange}>
+                  <FormControlLabel value="Yes" control={<Radio onClick={handleClick} />} label="Yes" />
+                  <FormControlLabel value="No" control={<Radio onClick={handleClick} />} label="No" />
+                </RadioGroup>
+              </FormControl>
+              </div>
+              <div>
+                <ul className="actions" style={buttonsStyle}>
+                  <li>
+                    <input type="submit" value="Submit" />
+                  </li>
+                  <li>
+                    <input type="reset" value="Reset" />
+                  </li>
+                </ul>
+                </div>
+            </form>
+            <div style={{ textAlign: 'center' }}>
+              <ul className="icons">
                 <li>
-                  <input type="submit" value="Send Message" />
+                  <a
+                    href="https://twitter.com/astricapp"
+                    className="icon fa-twitter"
+                  >
+                    <span className="label">Twitter</span>
+                  </a>
                 </li>
                 <li>
-                  <input type="reset" value="Reset" />
+                  <a href="https://facebook.com/astricapp" className="icon fa-facebook">
+                    <span className="label">Facebook</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://instagram.com/astricapp" className="icon fa-instagram">
+                    <span className="label">Instagram</span>
+                  </a>
                 </li>
               </ul>
-          </form>
-            <ul className="icons">
-              <li>
-                <a
-                  href="https://twitter.com/astricapp"
-                  className="icon fa-twitter"
-                >
-                  <span className="label">Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://facebook.com/astricapp" className="icon fa-facebook">
-                  <span className="label">Facebook</span>
-                </a>
-              </li>
-              <li>
-                <a href="https://instagram.com/astricapp" className="icon fa-instagram">
-                  <span className="label">Instagram</span>
-                </a>
-              </li>
-            </ul>
             </div>
-      </Layout>
+          </div>
+        </Layout>
       </div>
     );
   }
-}
-
-export default ContactForm
